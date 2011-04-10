@@ -102,6 +102,7 @@ module LibDrizzle
   attach_function :drizzle_con_create, [ :pointer, :pointer ], :pointer
   attach_function :drizzle_con_free, [ :pointer ], :void
   attach_function :drizzle_con_set_tcp, [ :pointer, :string, :int ], :void
+  attach_function :drizzle_con_set_auth, [ :pointer, :string, :string ], :void
   attach_function :drizzle_con_set_db, [ :pointer, :string ], :void
   attach_function :drizzle_con_add_options, [ :pointer, ConnectionOptions ], :void
   attach_function :drizzle_con_fd, [ :pointer ], :int

@@ -111,6 +111,15 @@ module Drizzle
     end
 
     # 
+    # set the user and password for the connection
+    #
+    def set_auth(user, password)
+      @user = user
+      @password = password
+      LibDrizzle.drizzle_con_set_auth(@con_ptr, @user, @password)
+    end
+
+    # 
     # set the host and port for the connection
     #
     def set_tcp(host, port)
